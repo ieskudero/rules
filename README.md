@@ -1,2 +1,3 @@
-# rules
-Rule engine to explode json objects
+# conficonfi
+
+Test project to implement rules and dynamic method implementation and execution
