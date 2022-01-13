@@ -1,0 +1,131 @@
+.conficonfiTreeRoot{
+    display: flex;
+    overflow-x: auto;
+    box-shadow: 11px -7px 5px 0px #cdcdcd99;
+    box-shadow: 3px 0px 0px 0px #cdcdcd47;
+    flex: 1;
+    height: 100%;
+}
+.formulaClass{
+    margin-left: 5px;
+    background: #fdff6570;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+}
+.formulaClass:hover{
+    background: #e3e4e591;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nameClassRoot, .nameClass{
+    margin-left: 5px;
+}
+.nameClass {
+    background: #ffd589b8;
+    vertical-align: middle;    
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.nameClass:hover {
+    background: #e3e4e591;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nameClassRoot:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+.subtree,.subtreeRoot {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+}
+.subtree {
+    margin-top: 5px;
+    margin-right: 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 225px;
+}
+.subtree:hover,.subtreeRoot:hover{
+    cursor: pointer;
+}
+.subtreeline{
+    margin-left: 5px;
+    margin-top: 20px;
+    border-top: 1px solid black;
+    height: 1px;
+    width: 15px;
+}
+.subtreeline:hover{
+    cursor: pointer;
+}
+.subtreepointer{
+    flex: 1;
+}
+
+.treeNameContainerClass{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    background: #ffd589;
+}
+
+.addTreeButton{
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.addTreeButtonRoot{
+
+}
+.addTreeButton:hover,.addTreeButtonRoot:hover, .deleteTreeButton:hover{
+    color: red;
+}
+.deleteTreeButton{
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+.conficonfiTree{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.conficonfiitem2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.arrowContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+}
+
+.arrowContainer:hover{
+    color: lightgray;
+}
+.arrow {
+/*  */
+}
+
+.treeChildren,.treeChildrenRoot{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.treeChildrenRoot{
+    margin-left: -15px;
+}

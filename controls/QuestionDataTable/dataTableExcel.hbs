@@ -1,0 +1,45 @@
+<div class="dataTable" >
+    <div class="tableBody">
+        <div class="heatherRow">
+            {{#each headers}}
+                <div class="cellHeader dtHeader" data-index="{{@index}}">
+                    <label>{{this}}</label>
+                    <div class="orderBox">
+                        <div class="tableOrder clickOrder" data-index="{{@index}}" data-direcction="-1">keyboard_arrow_up</div>
+                        <div class="tableOrder clickOrder" data-index="{{@index}}" data-direcction="1">keyboard_arrow_down</div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+        {{#each data}}
+        <div class="dataRow" data-action="clickRow" data-code="{{ID.value}}">
+            {{#each this}}
+                <div data-index="{{@index}}" class="cellRow dtRow">
+                    {{#if input}}
+                        <input type="text" value="{{value}}" class="inputAction dtInput" {{enabled}}
+                               data-index="{{@index}}" data-code="{{../ID.value}}"/>
+                    {{else if select}}
+                        <select class="changeAction dtSelect" {{enabled}}
+                               data-index="{{@index}}"data-code="{{../ID.value}}">
+                            {{#each this.options}}
+                                <option value="{{v}}" {{selected}}>{{d}}</option>
+                            {{/each}}
+                        </select>
+                    {{else if checkbox}}
+                        <input type="checkbox" {{checked}} class="inputAction dtCheck" {{enabled}}
+                               data-index="{{@index}}" data-code="{{../ID.value}}"/>
+                    {{else if button}}
+                        <div class="clickAction dtButton material-icons" title="delete" {{enabled}}
+                               data-index="{{@index}}" data-code="{{../ID.value}}">edit</div>
+                        <div class="clickAction dtButton material-icons" title="delete" {{enabled}}
+                               data-index="{{@index}}" data-code="{{../ID.value}}">delete</div>
+                    {{else}}
+                        {{value}}
+                    {{/if}}
+                </div>
+            {{/each}}
+        </div>
+        {{/each}}
+    </div>
+    <div class="addRow material-icons" id="addRowBtn">add</div>
+</div>

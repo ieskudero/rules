@@ -1,0 +1,58 @@
+@import url("../../controls/QuestionDataTable/datatableExcel.css");
+
+#globals{
+    position: fixed;
+    right: 80%;
+    left: 0;
+    top: 55px;
+    bottom: 0;
+}
+
+#globalEditor{
+    position: fixed;
+    right: 0;
+    left: 20%;
+    top: 55px;
+    bottom: 10%;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.globalText{
+    flex: 1;
+    resize: none;
+    display: flex;
+}
+
+#lowbar{
+    position: fixed;
+    left: 30%;
+    right: 0;
+    top: 90%;
+    bottom: 0;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#globalErrorArea{
+    flex: 1;
+    height: 400px;
+    display: none;
+    padding: 10px;
+    overflow: auto;
+    border: 3px solid red;
+    margin-top: 10px;
+}
+
+.globalsSaveButton{
+    cursor: pointer;  
+    font-size: 35px !important;
+}
+.globalsSaveButton:hover{
+    color: rgb(180, 111, 111); 
+}

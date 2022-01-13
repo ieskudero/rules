@@ -1,0 +1,48 @@
+<div class="formContainer">
+    {{#each _vars}}
+        {{#if (or (eq type "text") (eq type "number"))}}
+            <div class="formTextContainer">
+                    <div class="formQuestion">{{question}}</div>
+                    <textarea class="formText" type="text" 
+                        data-type="{{type}}" 
+                        data-code="{{code}}" 
+                        data-selected="{{selected}}" 
+                        {{convertBoolToEnabled enabled}} 
+                        data-mandatory="{{mandatory}}" 
+                        data-visible="{{visible}}">{{value}}</textarea>
+            </div>
+        {{/if}}
+        {{#if (eq type "bool")}}
+        <div class="formCheckLabel">
+            <label>
+                <input class="formBoolean" 
+                        type="checkbox" 
+                        data-type="{{type}}" 
+                        data-code="{{code}}" 
+                        data-selected="{{selected}}" 
+                        {{convertBoolToEnabled enabled}} 
+                        data-mandatory="{{mandatory}}" 
+                        data-visible="{{visible}}" 
+                        {{convertBoolToChecked value}}>
+                   {{question}}
+            </label>
+        </div>
+        {{/if}}
+        {{#if (eq type "combo")}}
+            <div class="formComboContainer">
+                <div class="formQuestion">{{question}}</div>
+                <select class="formCombo" 
+                    data-type="{{type}}" 
+                    data-code="{{code}}" 
+                    data-selected="{{selected}}" 
+                    {{convertBoolToEnabled enabled}} 
+                    data-mandatory="{{mandatory}}" 
+                    data-visible="{{visible}}" value="{{value}}">
+                    {{#each control_data}}
+                            <option value="{{name}}">{{value}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        {{/if}}
+    {{/each}}
+</div>

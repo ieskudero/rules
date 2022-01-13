@@ -1,0 +1,15 @@
+<div class="attContainer">
+    <div class="itemHtml">
+        <div class="itemName">Name</div>
+        <textarea class="itemValue">{{name}}</textarea>
+    </div>
+    {{#each attributes}}
+        <div class="itemHtml">
+            <div class="itemName">{{name}}</div>
+            <textarea class="itemValue" data-name="{{name}}">{{value}}</textarea>
+        </div>
+    {{/each}}
+    <div class="itemHtml">
+        <div class="itemAddButton">+</div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+
+*[data-column="0"]{
+    flex: 0.2;
+}
+*[data-column="1"]{
+    flex: 0.9;
+}
+input[data-column="0"],input[data-column="1"]{
+    flex: 1;
+}
+*[data-column="2"]{
+    flex: 0.005;
+}
+*[data-delete="true"]{
+    flex: 1;
+}

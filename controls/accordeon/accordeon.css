@@ -1,0 +1,53 @@
+.accordion {
+    background-color: #548db3;
+    color: white;
+    cursor: pointer;
+    line-height: 20px;
+    height: 20px;
+    text-align: left;
+    font-size: 15px;
+    transition: 0.4s;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .accordion:hover {
+    background-color: #7d9eb5;
+  }
+
+  .accordeonPanel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .accordionName{
+    flex: 1;
+  }
+
+  .accordionIcon{
+    color: white !important;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    margin: 5px;
+    min-height: 250px;
+  }
+
+  .equalSign{
+    margin: 5px;
+  }
+
+  .formulaText{
+    flex: 1;
+    margin: 5px;
+  }
+  .itemPanel{
+    flex: 1;
+  }

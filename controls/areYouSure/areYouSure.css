@@ -1,0 +1,58 @@
+.areYouSureHtmlContainer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.349);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.areYouSureFormContainer{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 40%);
+}
+.areYouSureContainer{    
+    display: flex;
+    width: 150px;
+    margin: 5px;
+    font-size: 20px;
+}
+.areYouSureHtmlName{
+    margin-right: 5px;
+}
+.areYouSureHtmlValue{
+    flex: 1;
+    margin-right: -5px;
+}
+.areYouSureButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.areYouSureOKButton, .areYouSureCancelButton{
+    border: 1px solid black;
+    align-self: flex-end;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    margin-left: 15px;
+}
+.areYouSureOKButton:hover, .areYouSureCancelButton:hover{
+    cursor: pointer;
+    background: #cfcfcf;
+}

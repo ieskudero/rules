@@ -1,0 +1,77 @@
+#conficonfilistContainer{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    border: none;
+    box-shadow: 0px 0px 5px 0px #cdcdcd;
+}
+.conficonfiList{
+    flex: 1;
+    flex-direction: column;
+}
+.listItemContainer{
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+.listItemContainer:hover{
+    background-color: #dfdfdf8c;
+    cursor: pointer;
+}
+.conficonfiButton{
+    color: #fff;
+    transition: background-color 0.3s ease;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2em;
+    background-color: #878282;
+    height: 35px;
+    margin: 5px 15px 5px 15px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 35px;
+    cursor: pointer;
+}
+.conficonfiButton:hover{
+    background-color: #7bddff87;
+}
+
+.listOptionIcon{
+    width: 25px;
+    background: #a9b7ff;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.listOptionName{
+    flex: 1;
+    background: lightgray;
+    padding-left: 10px;
+    padding-top: 7px;
+}
+.listOptionName:hover{
+    color: white;
+}
+.listDeleteButton{
+    background: lightgray;
+}
+.listDeleteButton:hover{
+    color: #6378e3;
+}
+.lselected{
+    background: #ffc1c7;
+}
+.confiListTitle{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    background: #548db3;
+    color: white;
+    font-size: 22px;
+}

@@ -1,0 +1,36 @@
+<div class="dataTable" >
+        <div class="tableBody">
+            <div class="heatherRow">
+                {{#each headers}}
+                    <div class="cellHeader dtHeader" data-column="{{@index}}">
+                        <label>{{this}}</label>
+                        <div class="orderBox">
+                            <div class="tableOrder clickOrder" data-column="{{@index}}" data-direcction="-1">keyboard_arrow_up</div>
+                            <div class="tableOrder clickOrder" data-column="{{@index}}" data-direcction="1">keyboard_arrow_down</div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+            {{#each data}}
+            <div class="dataRow" data-action="clickRow">
+                {{#each this}}
+                    <div class="cellRow dtRow" data-column="{{@index}}">
+                        {{#if input}}
+                            <input type="text" value="{{value}}" 
+                                class="inputAction dtInput" 
+                                {{enabled}}
+                                data-column="{{@index}}" data-row="{{@../index}}" />  
+                        {{else if button}}
+                            <div class="clickAction dtButton material-icons" 
+                                 title="delete" {{enabled}}
+                                 data-row="{{@../index}}" data-delete="true">delete</div>
+                        {{else}}
+                            {{value}}
+                        {{/if}}                      
+                    </div>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+        <div class="addRow material-icons" id="addRowBtn">add</div>
+    </div>

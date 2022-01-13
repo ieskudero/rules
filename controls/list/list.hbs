@@ -1,0 +1,13 @@
+<div id="conficonfilistContainer">
+    <div id={{id}} class="conficonfiList">
+        <div class="confiListTitle">{{title}}</div>
+        {{#each children}}
+            <div class="listItemContainer" data-uuid="{{uuid}}" data-id="{{id}}" data-value="{{value}}">
+                <div class="listOptionIcon">{{@index}}</div>
+                <div class="listOptionName">{{name}}</div>
+                <div class="material-icons listDeleteButton" data-id="{{id}}">delete</div>
+            </div>
+        {{/each}}
+        <div class="conficonfiButton" id="add_{{title}}">+</div>
+    </div>
+</div>

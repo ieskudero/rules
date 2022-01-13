@@ -1,0 +1,59 @@
+.formContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 5px;
+
+    width: 25%;
+    height: 50%;
+    background-color: white;
+}
+
+.formTextContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.formCheckLabel{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+    float: left;
+}
+
+.formComboContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.formQuestion {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    min-width: 125px;
+}
+
+.formText {
+    flex: 1;
+    margin-bottom: 5px;
+    min-width: 100px;
+}
+.formBoolean {
+    margin-left: 15px;
+    float: right;
+    min-height: 20px;
+    min-width: 20px;
+}
+.formCombo {
+    flex: 1;
+    margin-bottom: 5px;
+    height: 35px;
+    min-width: 100px;
+}
+[data-visible="true"]{
+    display: none;
+}

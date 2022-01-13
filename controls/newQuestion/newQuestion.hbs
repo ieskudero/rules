@@ -1,0 +1,78 @@
+<div class="questionHtmlContainer">
+    <div class="questionFormContainer">
+        <div class="questionInputContainer">
+            <div class="questionName">ID</div>
+            <input class="questionInput" id="question_ID" type="text" value="{{code}}">
+        </div>
+        <div class="questionInputContainer">
+            <div class="questionName">pregunta</div>
+            <input class="questionInput" id="question_Question" type="text" value="{{question}}">
+        </div>
+        <div class="questionInputContainer">
+            <div class="questionName">tipo:</div>
+            <select class="questionInput" id="questionTypeSelect">
+                <option value="number" {{isSelected type "number"}}>numero</option>
+                <option value="text" {{isSelected type "text"}}>texto</option>
+                <option value="bool" {{isSelected type "bool"}}>Verdadero/Falso</option>
+                <option value="combo" {{isSelected type "combo"}}>Multiples opciones</option>
+                <option value="source" {{isSelected type "source"}}>Fuente</option>
+            </select>
+        </div>
+        <div class="questionInputContainer">
+            <div class="questionName">{{valueLabel type}}</div>
+            <div class="questionControlDataContainer">
+                {{#if (eq type "number")}}
+                    <input class="questionControlDataInput" type="text" data-input="{{type}}" value="{{control_data}}"/>
+                {{/if}}
+                {{#if (eq type "text")}}
+                    <input class="questionControlDataInput" type="text" data-input="{{type}}" value="{{control_data}}"/>
+                {{/if}}
+                {{#if (eq type "bool")}}
+                    <input class="questionOptionValueCheck" type="checkbox" {{isChecked control_data}}/>
+                {{/if}}
+                {{#if (eq type "combo")}}
+                    {{#each control_data}}
+                        <div class="questionOptionContainer">
+                            <div class="questionOptionLabel">Valor:</div>
+                            <input class="questionOptionValueInput" data-index="{{@index}}" type="text" data-input="name" value="{{name}}"/>
+                            <div class="questionOptionLabel">Descripción:</div>
+                            <input class="questionOptionValueInput" data-index="{{@index}}" type="text" data-input="value" value="{{value}}"/>
+                            <div class="deleteControlDataBtn material-icons" data-index="{{@index}}">delete</div>
+                        </div>
+                    {{/each}}                    
+                {{/if}}
+                {{#if (eq type "source")}}
+                   <div class="questionSourceContainer">
+                        <div class="questionSourceItem">
+                            <div class="questionName">Template:</div>
+                            <label class="questionSourceInput">
+                                <input type="file" id="questionSourceTemplate" accept=".hbs, .html">
+                                {{inputText control_data.template}}
+                            </label>
+                        </div>
+                        <div class="questionSourceItem">
+                            <div class="questionName">Css:</div>
+                            <label class="questionSourceInput">
+                                <input type="file" id="questionSourceCss" accept=".css">
+                                {{inputText control_data.css}}
+                            </label>
+                        </div>
+                        <div class="questionSourceItem">
+                            <div class="questionName">Source:</div>
+                            <div class="questionSource"></div>
+                        </div>
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+        <div class="questionInputContainer">
+            <div class="questionName">formula anterior</div>
+            <textarea class="questionTextArea" id="question_before" type="text" value="{{before}}"></textarea>
+        </div>
+        <div class="questionInputContainer">
+            <div class="questionName">formula posterior</div>
+            <textarea class="questionTextArea" id="question_after" type="text" value="{{after}}"></textarea>
+        </div>
+        <div class="questionSaveButton">Save</div>
+    </div>  
+</div>  

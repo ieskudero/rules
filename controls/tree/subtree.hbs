@@ -1,0 +1,23 @@
+<div class="conficonfiTree">        
+    <div class="subtree">
+        <div class="arrowContainer">
+            <div class="arrow material-icons"  data-id="{{id}}" data-uuid="{{uuid}}">arrow_right</div>
+        </div>
+        <div class="conficonfiitem2">
+            <div class="formulaClass" data-type="FORMULA_BEFORE" data-id="{{id}}" data-uuid="{{uuid}}">before</div>
+            <div class="itemClass">
+                <div class="nameClass" data-type="BOMB" data-id="{{id}}" data-uuid="{{pointer.uuid}}">{{name}}</div> {{! rule id, object uuid }}
+            </div>
+            <div class="formulaClass" data-type="FORMULA_AFTER" data-id="{{id}}" data-uuid="{{uuid}}">after</div>
+            <div class="deleteTreeButton material-icons" data-id="{{id}}" data-uuid="{{uuid}}">delete</div>
+            <div class="addTreeButton material-icons" data-id="{{id}}" data-uuid="{{uuid}}">add</div>
+        </div>                    
+    </div>
+    <div class="treeChildren">
+        {{#if pointer.pointers}} {{! Within the context of the current item }}
+            {{#each pointer.pointers}}
+                <div class="subtreepointer" >{{> tree}}</div> {{! Recursively render the partial }}
+            {{/each}}
+        {{/if}}
+    </div>
+</div>  

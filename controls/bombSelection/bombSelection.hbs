@@ -1,0 +1,13 @@
+<div class="bombHtmlContainer">
+    <div class="bombFormContainer">
+        <div class="bombContainer">
+            <div class="bombHtmlName">Item:</div>
+            <select class="bombHtmlValue" type="text">
+                {{#each children}}
+                    <option data-uuid="{{uuid}}">{{name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="bombOKButton">OK</div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+{
+	"name": "conficonfi",
+	"version": "1.0.0",
+	"description": "",
+	"main": "main.js",
+	"scripts": {
+		"dev": "webpack-dev-server",
+		"build": "webpack",
+		"sonar": "node sonar"
+	},
+	"author": "",
+	"license": "ISC",
+	"homepage": "",
+	"devDependencies": {
+		"css-loader": "3.2.0",
+		"file-loader": "4.0.0",
+		"html-loader": "0.5.5",
+		"html-webpack-plugin": "3.2.0",
+		"image-webpack-loader": "5.0.0",
+		"mini-css-extract-plugin": "0.8.0",
+		"ttf-loader": "1.0.2",
+		"uglifyjs-webpack-plugin": "2.1.3",
+		"url-loader": "2.0.1",
+		"webpack": "4.41.1",
+		"webpack-auto-inject-version": "1.2.2",
+		"webpack-bundle-analyzer": "3.4.1",
+		"webpack-cli": "3.3.9",
+		"webpack-dev-server": "3.7.2",
+		"sonarqube-scanner": "2.8.1",
+		"resolve-url-loader": "4.0.0",
+		"three": "0.133.0",
+		"monaco-editor-webpack-plugin": "6.0.0"
+	},
+	"dependencies": {
+		"digicon-web-templatemanager": "21.11.0",
+		"digicon-web-datatables": "21.11.0",
+		"digicon-events-base": "21.11.0",
+		"digicon-web-model": "21.11.0",
+		"monaco-editor": "0.30.1",
+		"uuid": "8.3.2"
+	}
+}

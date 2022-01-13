@@ -1,0 +1,66 @@
+@import url("~digicon-web-datatables/css/dataTable.css");
+
+*[data-hide="hide"]{
+    display: none;
+}
+
+input[type="text"]:disabled, input[type="checkbox"]:disabled, select:disabled {
+  color:grey;
+}
+
+.dtSelect, .dtInput, .dtCheck{
+    border: none;
+    flex: 1;
+    margin: 5px;
+    height: 95%;
+}
+
+.dtCheck{
+    height: 50%;
+}
+
+.dtRow, .dtHeader{
+    padding: 0;
+    min-width: 180px;
+}
+
+.searchInput {
+    margin-left: 5px;
+    max-width: 300px;
+}
+
+.dtButton{
+    cursor: pointer;
+    font-size: 15px;
+    min-width: 25%;
+    text-align: center;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-left: 9px;
+}
+
+.dtButton:hover{
+    background-color: #efefef;
+}
+
+.rowSave, .rowEdit, .addRow{
+    cursor: pointer;
+    border: 1px solid lightgrey;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.rowSave:hover, .rowEdit:hover, .addRow:hover{
+    background-color: #efefef;
+}
+.rowEdit{
+    margin-left: 30px;
+}
+
+/* override */
+.cellRow {
+    min-height: 35px;    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
